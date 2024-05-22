@@ -1,0 +1,31 @@
+{
+  "name": "bookify-booking",
+  "version": "1.0.0",
+  "description": "Booking hotel website - created by congvt109",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch backend --exec node backend/server.js",
+    "server": "nodemon api/server.js",
+    "client": "npm start --prefix clent",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --force --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congvt109/Test-deploy-MERN-on-Heroku.git"
+  },
+  "keywords": [
+    "booking",
+    "mern",
+    "mernstack"
+  ],
+  "author": "congvt109",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0"
+  }
+}
