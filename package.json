@@ -22,8 +22,8 @@
   "author": "congvt109",
   "license": "MIT",
   "engines": {
-    "node": "18.17.0",
-    "npm": "10.8.0"
+    "node": "^18.17.0",
+    "npm": "^10.8.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
