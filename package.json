@@ -8,7 +8,7 @@
     "start": "nodemon --watch backend --exec node backend/server.js",
     "server": "nodemon api/server.js",
     "client": "npm start --prefix clent",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --force --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "npm install -g npm@10.8.0 && npm config set update-notifier false && NPM_CONFIG_PRODUCTION=false npm install --force --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "author": "congvt109",
   "license": "MIT",
   "engines": {
-    "node": "18.x"
+    "node": "18.17.0",
+    "npm": "10.8.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
