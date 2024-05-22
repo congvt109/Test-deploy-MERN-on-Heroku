@@ -27,6 +27,10 @@ mongoose.connect(process.env.MONGO_URL, {
 
 
 
+
+
+
+
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
