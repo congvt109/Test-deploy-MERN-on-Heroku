@@ -18,10 +18,9 @@ app.use(express.json());
 const PASSWORD = process.env.DB_PASSWORD;
 const USER = process.env.DB_USER;
 const DB_NAME = process.env.DB_NAME;
-console.log(PASSWORD);
 const URL = `mongodb+srv://${USER}:${PASSWORD}@cluster0.t8ywafb.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 
-mongoose.connect(URL, {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
